@@ -2,12 +2,13 @@
 ## Description
 This is a .NET 8 solution, designed to be a microservice in an ETL software.
 
-This is the **transformation** part of a SBB CFF FFS app. There are three distinct parts to this solution :
+This is the **transformation** part of a SBB CFF FFS app. There are four distinct parts to this solution :
 
 - The **Restfull API** served with ASP.net core (contains only controllers)
-- Raw format conversion (from text extracted from a PDF) and associated test project :
+- **Common interfaces** : Contains only interfaces for communication between the two main parts
+- **Raw format conversion** (from text extracted from a PDF) and associated test project :
   - Core maintainer : Cyprien Jaquier
-- Business transformation / computation of what was returned by the text parser and associated test project :
+- **Business transformation / computation** of what was returned by the text parser and associated test project :
   - Core maintainer : Eliott Jaquier
 
 ## Getting Started
@@ -67,6 +68,9 @@ Classes and code structure follow the [Microsoft C# Coding Conventions](https://
 ### Workflow
 * [How to commit](https://www.conventionalcommits.org/en/v1.0.0/)
 * Pull requests are open to merge in the develop branch.
+* Feature branches are created from the develop branch and merged back into it. 
+  * We use the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+  * The name of a feature branch should be `feature/feature_branch` in snake case.
 
 ## License
 Distributed under the MIT License. See LICENSE.txt for more information.
